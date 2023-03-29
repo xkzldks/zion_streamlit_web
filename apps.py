@@ -4,7 +4,7 @@ st.write('# asdf')
 st.write('## rasd')
 view
 st.write('bar')
-st.bar_char(view)
+st.bar_chart(view)
 import pandas as pd
 sview = pd.Series(view)
 sview
