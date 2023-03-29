@@ -1,2 +1,10 @@
-view = [1,2,3,5,6,89]
+import streamlit as st
+view = [100,150,30]
+st.write('# asdf')
+st.write('## rasd')
 view
+st.write('bar')
+st.bar_char(view)
+import pandas as pd
+sview = pd.Series(view)
+sview
