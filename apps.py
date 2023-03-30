@@ -1,10 +1,18 @@
 import streamlit as st
-import pymongo
-# client = pymongo.MongoClient("mongodb+srv://test:test@cluster1.9pincbb.mongodb.net/?retryWrites=true&w=majority", server_api=ServerApi('1'))
-# db = client.dbstreamlit
-
-d = list(db.chulseck.find({}, {'_id': False}))
-d
+import pandas as pd
+from modules.data_query import DataQuery
+from modules.utils import run_concurrent_queries, estimate_gigabytes_scanned
+from modules.sql_queries import (
+    QUERY_POLLUTION,
+    QUERY_TEMPERATURE,
+    QUERY_PRCP,
+    NAMES_TO_CODES,
+    STATES,
+    YEARS,
+)
+from google.cloud import bigquery
+from modules.plot import plot_pol, plot_temp, plot_prc
+import urllib
 view = [100,150,30]
 st.write('# asdf')
 st.write('## rasd')
